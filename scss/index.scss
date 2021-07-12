@@ -1,0 +1,541 @@
+@import './vars.scss';
+@import './reset.scss';
+@import './mixins/index.scss';
+
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  transition: background-color 0.6s ease, color 0.4s ease;
+  background-color: $red;
+  @include text('Montserrat', 600, 24px, 29px, #f2f2f2);
+  cursor: pointer;
+  text-align: center;
+  padding: 16px 95px;
+  border: 1px solid $yellow;
+  &:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid $brown;
+  }
+}
+
+.mainheader {
+  width: 100%;
+  background-color: $yellow;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  &__content {
+    width: 100%;
+    max-width: 1330px;
+  }
+  &__image {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 43px;
+  &__title {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+  }
+  &__a {
+    @include text('Montserrat', 500, 18px, 22px, $brown);
+    padding-left: 50px;
+  }
+  &__number {
+    text-decoration: underline;
+    @include text('Montserrat', 600, 24px, 29px, $brown);
+  }
+}
+
+.header {
+  &__title {
+    @include text('Montserrat', bold, 70px, 89px, $brown);
+    padding-top: 71px;
+    padding-bottom: 23px;
+  }
+  &__p {
+    @include text('Montserrat', normal, 30px, 37px, $brown);
+    padding-bottom: 46px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+
+    padding: 70px 40px 80px 10px;
+  }
+  &__image {
+    display: flex;
+  }
+}
+
+.allcontent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.how {
+  max-width: 1100px;
+  width: 100%;
+  &__blocks {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    max-width: 485px;
+    width: 100%;
+    padding-bottom: 67px;
+  }
+
+  &__text {
+    padding-left: 24px;
+  }
+
+  &__name {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    text-align: center;
+    padding: 95px 0 60px 0;
+  }
+  &__number {
+    @include text('Montserrat', 300, 72px, 88px, $brown);
+    text-shadow: 3px 0px 0px #fed100;
+  }
+  &__title {
+    @include text('Montserrat', 500, 20px, 24px, $brown);
+    padding-bottom: 15px;
+  }
+  &__p {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+    width: 390px;
+    height: 56.41px;
+  }
+}
+
+.price {
+  max-width: 1405px;
+  width: 100%;
+  &__htitle {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  &__hp {
+    @include text('Montserrat', 600, 24px, 29px, $brown);
+    padding: 15px 0 60px 0;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    transition: border-color 0.2s ease-in-out;
+    border: 1px solid#EBEBEB;
+    padding: 88px 84px;
+    &:hover {
+      border-color: $yellow;
+    }
+  }
+
+  &__cardcontent {
+    display: inline;
+    align-items: center;
+  }
+
+  &__btn {
+    color: black;
+    margin: 0 auto;
+    background-color: $yellow;
+    text-align: center;
+    display: flex;
+    @include text('Montserrat', 500, 20px, 24px, $brown);
+  }
+
+  &__title {
+    @include text('Montserrat', 600, 24px, 29px, $brown);
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  &__p {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+
+    text-align: center;
+    p {
+      padding-bottom: 25px;
+    }
+  }
+  &__price {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    padding: 60px 0px 50px 0px;
+    text-align: center;
+  }
+}
+
+.avtopark {
+  max-width: 1100px;
+  width: 100%;
+
+  &__htitle {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  &__hp {
+    @include text('Montserrat', 600, 24px, 29px, $brown);
+    padding: 15px 0 60px 0;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__types {
+    display: flex;
+    padding-bottom: 70px;
+  }
+
+  &__type {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: 20px;
+    border: 1px solid #ebebeb;
+    padding: 0;
+    width: 201px;
+    height: 50px;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+      border-color: $yellow;
+    }
+  }
+
+  &__p {
+    @include text('Montserrat', 500, 20px, 24px, $brown);
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  &__title {
+    @include text('Montserrat', 600, 24px, 29px, $brown);
+    padding-bottom: 40px;
+  }
+
+  &__infocontent {
+    display: inline-flex;
+  }
+
+  img {
+    padding-right: 15px;
+    padding-bottom: 38px;
+  }
+
+  &__pinfo {
+    padding-bottom: 30px;
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+  }
+
+  &__btn {
+    background-color: $yellow;
+    color: $brown;
+    @include text('Montserrat', 500, 20px, 24px, $brown);
+    margin-top: 35px;
+    display: flex;
+  }
+
+  &__truckimg {
+    display: flex;
+  }
+
+  &__choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.comment {
+  background-color: #fed100;
+
+  width: 100%;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__blocks {
+    display: flex;
+  }
+
+  &__title {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  &__name {
+    @include text('Montserrat', 600, 24px, 29px, $brown);
+    padding-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  &__date {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+    padding-right: 10px;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__text {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+    width: 420px;
+    height: 147px;
+  }
+
+  &__readmore {
+    text-decoration: underline;
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    color: $brown;
+    @include text('Montserrat', 500, 20px, 24px, $brown);
+    border: 1px solid $brown;
+    margin-bottom: 95px;
+  }
+}
+
+.buy {
+  max-width: 1002px;
+  width: 100%;
+
+  &__header {
+    display: inline;
+  }
+
+  &__htitle {
+    padding-top: 123px;
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    padding-left: 44px;
+  }
+
+  &__hp {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 45px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  &__block {
+    @include text('Montserrat', 500, 20px, 24px, rgba(51, 51, 51, 0.7));
+  }
+  input {
+    border-bottom: 1px solid #333333;
+    color: black;
+  }
+
+  &__blocks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__button {
+    align-items: center;
+  }
+  &__btn {
+    transition: background-color 0.6s ease, color 0.4s ease;
+    background-color: $red;
+    @include text('Montserrat', 500, 20px, 24px, #f2f2f2);
+    cursor: pointer;
+    text-align: center;
+    padding: 13px 30px;
+    border: 1px solid $brown;
+    &:hover {
+      color: black;
+      background-color: transparent;
+      border: 1px solid $brown;
+    }
+  }
+  &__accept {
+    display: flex;
+    padding-left: 44px;
+  }
+
+  &__checkbox {
+    padding-right: 10px;
+    background-color: #fff;
+  }
+
+  &__atext {
+    @include text('Montserrat', normal, 12px, 15px, $brown);
+    letter-spacing: 0.015em;
+    padding-bottom: 111px;
+    display: flex;
+  }
+}
+
+.box {
+  background-image: url('/img/map.png');
+
+  width: 100%;
+  height: 666px;
+  position: relative;
+
+  &__card {
+    padding-left: 40px;
+    background-color: white;
+    width: 368px;
+    height: 326px;
+    margin-left: 450px;
+    margin-top: 162px;
+  }
+  &__title {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__image {
+    padding-right: 15px;
+  }
+
+  &__img {
+    padding-bottom: 26px;
+  }
+
+  &__text {
+    @include text('Montserrat', normal, 16px, 21px, $brown);
+  }
+
+  &__p {
+    padding-bottom: 19px;
+  }
+  &__mail {
+    text-decoration: underline;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+}
+
+.footer {
+  background-color: $yellow;
+  width: 100%;
+  display: flex;
+  padding-top: 100px;
+  &__move {
+    @include text('Montserrat', 600, 30px, 37px, $brown);
+    padding-bottom: 44px;
+  }
+  &__movee {
+    @include text('Montserrat', normal, 16px, 21px, #0e0f12);
+    padding-left: 307px;
+  }
+
+  &__p {
+    padding-bottom: 44px;
+  }
+
+  &__nav {
+    padding-left: 246px;
+    padding-right: 178px;
+    @include text('Montserrat', 500, 20px, 24px, $brown);
+  }
+
+  &__a {
+    padding-bottom: 15px;
+  }
+
+  &__contacts {
+    padding-right: 170px;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+
+  &__mail {
+    text-decoration: underline;
+    @include text('Montserrat', 500px, 20px, 24px, $brown);
+  }
+
+  &__calling {
+    transition: background-color 0.6s ease, color 0.4s ease;
+    @include text('Montserrat', 500px, 20px, 24px, $brown);
+    padding: 10px 30px;
+    width: 250px;
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid #333333;
+    &:hover {
+      background-color: $red;
+      color: white;
+    }
+  }
+  &__number {
+    @include text('Montserrat', 500px, 20px, 24px, $brown);
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 5px;
+  }
+}
